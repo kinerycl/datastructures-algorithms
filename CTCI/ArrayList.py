@@ -14,6 +14,11 @@ class ArrayList(object):
             return True
         return False
 
+    def is_empty(self):
+        if self._count == 0:
+            return True
+        return False
+
     def insert(self, val):
         if self.is_full():
             self.__double()
@@ -21,6 +26,8 @@ class ArrayList(object):
         self._count += 1
 
     def remove(self):
+        if self.is_empty():
+            return None
         self._count -= 1
         self._data[self._count] = None
 
