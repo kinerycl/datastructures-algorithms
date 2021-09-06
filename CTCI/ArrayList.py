@@ -1,7 +1,7 @@
 class ArrayList(object):
     def __init__(self):
         self._size = 5
-        self._data = [0 for i in range(self._size)]
+        self._data = [None for i in range(self._size)]
         self._count = 0
 
     def __double(self):
