@@ -45,15 +45,22 @@ class SinglyLinked(object):
 
     def find_node(self, data):
         data = str(data)
+        prev = None
         curr = self.head
         while curr is not None:
             if curr.data == data:
-                print("Data found")
-                return curr
+                return prev, curr
+            prev = curr
             curr = curr.next
         else:
-            print("Data not found")
-            return
+            return None, None
+
+    def remove_node(self, data):
+        prev, curr = self.find_node(data)
+        if prev is None and curr is not None:
+            self.head = curr.next
+        elif curr is not None:
+            prev.next = curr.next
 
     def __str__(self):
         ret = ""
