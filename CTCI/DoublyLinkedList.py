@@ -84,25 +84,3 @@ class DoublyLinked(object):
             ret += " "
             node = node.next
         return ret
-
-
-n1 = Node('hellokitty')
-d1 = DoublyLinked(Node("J"))
-d2 = DoublyLinked()
-d2.insert_head(n1)
-print(d1, d2)
-d1.insert_head(Node("eheh"))
-d2.insert_head(Node(":)"))
-print(d1, d2)
-d1.insert_head(Node("eheh"))
-d2.insert_head(Node(":((("))
-print(d1)
-d1.remove_node("eheh")
-d1.remove_node("eheh")
-d1.remove_node("J")
-d1.remove_node("eheh")
-d1.remove_node("J")
-
-print(d2)
-d2.remove_node(":)")
-print(d2)
