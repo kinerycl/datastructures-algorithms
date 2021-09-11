@@ -11,7 +11,7 @@ class Stack(object):
 
     def push(self, item):
         self.count += 1
-        self.data.append(item)
+        self.data.insert(0, item)
 
     def peek(self):
         if self.is_empty():
